@@ -36,5 +36,11 @@ module.exports = {
         storage: storageSetting,
         limits: 5 * 1024 * 1024,//5MB,
         fileFilter: filterExcel
+    }),
+    // Generic attachment upload (used for message file attachments)
+    // Field name used in routes: req.file via uploadAttachment.single('file')
+    uploadAttachment: multer({
+        storage: storageSetting,
+        limits: 5 * 1024 * 1024, // 5MB
     })
 }
